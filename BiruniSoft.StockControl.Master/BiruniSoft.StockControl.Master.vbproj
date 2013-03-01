@@ -126,6 +126,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmBarangList.resx">
+      <DependentUpon>frmBarangList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGudangList.resx">
+      <DependentUpon>frmGudangList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKategoriLust.resx">
+      <DependentUpon>frmKategoriLust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatuanList.resx">
+      <DependentUpon>frmSatuanList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

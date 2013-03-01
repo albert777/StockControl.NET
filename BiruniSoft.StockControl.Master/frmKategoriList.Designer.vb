@@ -1,17 +1,14 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmGudangList
+Partial Class frmKategoriList
     Inherits BiruniSoft.StockControl.Shared.frmList
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
     End Sub
 
     'Required by the Windows Form Designer
@@ -25,7 +22,6 @@ Partial Class frmGudangList
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InheritedDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -34,13 +30,13 @@ Partial Class frmGudangList
         '
         'Label1
         '
-        Me.Label1.Size = New System.Drawing.Size(105, 19)
-        Me.Label1.Text = "List Gudang"
+        Me.Label1.Size = New System.Drawing.Size(176, 19)
+        Me.Label1.Text = "List Kategori Barang"
         '
         'InheritedDataGridView1
         '
-        Me.InheritedDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.InheritedDataGridView1.DataMember = "Warehouses"
+        Me.InheritedDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.InheritedDataGridView1.DataMember = "Categories"
         Me.InheritedDataGridView1.DataSource = Me.DsStock1
         '
         'DataGridViewTextBoxColumn1
@@ -59,25 +55,17 @@ Partial Class frmGudangList
         '
         'DataGridViewTextBoxColumn3
         '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "Name"
         Me.DataGridViewTextBoxColumn3.HeaderText = "Name"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 200
         '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Location"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Location"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'frmGudangList
+        'frmKategoriLust
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(634, 342)
-        Me.Name = "frmGudangList"
-        Me.Text = "List Gudang"
+        Me.Name = "frmKategoriLust"
+        Me.Text = "List Kategori Barang"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -89,5 +77,5 @@ Partial Class frmGudangList
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+
 End Class

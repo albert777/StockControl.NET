@@ -24,29 +24,31 @@ Partial Class frmList
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmList))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.btnRefresh = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.InheritedDataGridView1 = New BiruniSoft.StockControl.[Shared].InheritedDataGridView()
+        Me.DsStock1 = New BiruniSoft.StockControl.[Shared].dsStock()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InheritedDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsStock1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Controls.Add(Me.Button6)
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnClose)
+        Me.Panel1.Controls.Add(Me.btnPrint)
+        Me.Panel1.Controls.Add(Me.btnRefresh)
+        Me.Panel1.Controls.Add(Me.btnDelete)
+        Me.Panel1.Controls.Add(Me.btnEdit)
+        Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -55,78 +57,78 @@ Partial Class frmList
         Me.Panel1.Size = New System.Drawing.Size(634, 67)
         Me.Panel1.TabIndex = 0
         '
-        'Button6
+        'btnClose
         '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button6.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.application_stop
-        Me.Button6.Location = New System.Drawing.Point(542, 32)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(80, 27)
-        Me.Button6.TabIndex = 7
-        Me.Button6.Text = "&Tutup"
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClose.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.application_stop
+        Me.btnClose.Location = New System.Drawing.Point(542, 32)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(80, 27)
+        Me.btnClose.TabIndex = 7
+        Me.btnClose.Text = "&Tutup"
+        Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnClose.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btnPrint
         '
-        Me.Button5.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.printer
-        Me.Button5.Location = New System.Drawing.Point(394, 32)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(80, 27)
-        Me.Button5.TabIndex = 6
-        Me.Button5.Text = "&Cetak"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnPrint.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.printer
+        Me.btnPrint.Location = New System.Drawing.Point(394, 32)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(80, 27)
+        Me.btnPrint.TabIndex = 6
+        Me.btnPrint.Text = "&Cetak"
+        Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnPrint.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnRefresh
         '
-        Me.Button4.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.refresh
-        Me.Button4.Location = New System.Drawing.Point(313, 32)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(80, 27)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "&Refresh"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnRefresh.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.refresh
+        Me.btnRefresh.Location = New System.Drawing.Point(313, 32)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(80, 27)
+        Me.btnRefresh.TabIndex = 5
+        Me.btnRefresh.Text = "&Refresh"
+        Me.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnRefresh.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnDelete
         '
-        Me.Button3.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.delete2
-        Me.Button3.Location = New System.Drawing.Point(232, 32)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(80, 27)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "&Hapus"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnDelete.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.delete2
+        Me.btnDelete.Location = New System.Drawing.Point(232, 32)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(80, 27)
+        Me.btnDelete.TabIndex = 4
+        Me.btnDelete.Text = "&Hapus"
+        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEdit
         '
-        Me.Button2.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.edit
-        Me.Button2.Location = New System.Drawing.Point(151, 32)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(80, 27)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "&Edit"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEdit.Image = Global.BiruniSoft.StockControl.[Shared].My.Resources.Resources.edit
+        Me.btnEdit.Location = New System.Drawing.Point(151, 32)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(80, 27)
+        Me.btnEdit.TabIndex = 3
+        Me.btnEdit.Text = "&Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAdd
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(70, 32)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(80, 27)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "T&ambah"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
+        Me.btnAdd.Location = New System.Drawing.Point(70, 32)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(80, 27)
+        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.Text = "T&ambah"
+        Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -157,6 +159,11 @@ Partial Class frmList
         Me.InheritedDataGridView1.Size = New System.Drawing.Size(634, 275)
         Me.InheritedDataGridView1.TabIndex = 3
         '
+        'DsStock1
+        '
+        Me.DsStock1.DataSetName = "dsStock"
+        Me.DsStock1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'frmList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -173,17 +180,19 @@ Partial Class frmList
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InheritedDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsStock1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Public WithEvents Panel1 As System.Windows.Forms.Panel
     Public WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Public WithEvents Button6 As System.Windows.Forms.Button
-    Public WithEvents Button5 As System.Windows.Forms.Button
-    Public WithEvents Button4 As System.Windows.Forms.Button
-    Public WithEvents Button3 As System.Windows.Forms.Button
-    Public WithEvents Button2 As System.Windows.Forms.Button
-    Public WithEvents Button1 As System.Windows.Forms.Button
+    Public WithEvents btnClose As System.Windows.Forms.Button
+    Public WithEvents btnPrint As System.Windows.Forms.Button
+    Public WithEvents btnRefresh As System.Windows.Forms.Button
+    Public WithEvents btnDelete As System.Windows.Forms.Button
+    Public WithEvents btnEdit As System.Windows.Forms.Button
+    Public WithEvents btnAdd As System.Windows.Forms.Button
     Public WithEvents Label1 As System.Windows.Forms.Label
     Public WithEvents InheritedDataGridView1 As BiruniSoft.StockControl.Shared.InheritedDataGridView
+    Protected WithEvents DsStock1 As BiruniSoft.StockControl.Shared.dsStock
 End Class

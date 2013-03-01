@@ -50,7 +50,7 @@ Partial Class frmInventoryStatus
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(638, 32)
+        Me.btnClose.Location = New System.Drawing.Point(638, 32)
         '
         'Label1
         '
