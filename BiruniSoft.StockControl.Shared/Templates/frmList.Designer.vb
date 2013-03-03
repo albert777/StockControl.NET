@@ -32,12 +32,8 @@ Partial Class frmList
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.InheritedDataGridView1 = New BiruniSoft.StockControl.[Shared].InheritedDataGridView()
-        Me.DsStock1 = New BiruniSoft.StockControl.[Shared].dsStock()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InheritedDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DsStock1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -151,25 +147,11 @@ Partial Class frmList
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'InheritedDataGridView1
-        '
-        Me.InheritedDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.InheritedDataGridView1.Location = New System.Drawing.Point(0, 67)
-        Me.InheritedDataGridView1.Name = "InheritedDataGridView1"
-        Me.InheritedDataGridView1.Size = New System.Drawing.Size(634, 275)
-        Me.InheritedDataGridView1.TabIndex = 3
-        '
-        'DsStock1
-        '
-        Me.DsStock1.DataSetName = "dsStock"
-        Me.DsStock1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'frmList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(634, 342)
-        Me.Controls.Add(Me.InheritedDataGridView1)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -179,8 +161,6 @@ Partial Class frmList
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InheritedDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DsStock1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -193,6 +173,4 @@ Partial Class frmList
     Public WithEvents btnEdit As System.Windows.Forms.Button
     Public WithEvents btnAdd As System.Windows.Forms.Button
     Public WithEvents Label1 As System.Windows.Forms.Label
-    Public WithEvents InheritedDataGridView1 As BiruniSoft.StockControl.Shared.InheritedDataGridView
-    Protected WithEvents DsStock1 As BiruniSoft.StockControl.Shared.dsStock
 End Class

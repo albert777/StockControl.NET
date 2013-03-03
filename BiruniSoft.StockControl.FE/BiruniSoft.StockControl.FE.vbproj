@@ -69,6 +69,15 @@
     <ApplicationIcon>cubes.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guifreaks.Common">
+      <HintPath>..\ThirdParty\Guifreaks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.NavigationBar">
+      <HintPath>..\ThirdParty\Guifreaks.NavigationBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.NavigationBar.XmlSerializers">
+      <HintPath>..\ThirdParty\Guifreaks.NavigationBar.XmlSerializers.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -203,6 +212,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cubes.ico" />
+    <None Include="Resources\cubes2.png" />
+    <None Include="Resources\books2.png" />
+    <None Include="Resources\chart1.png" />
+    <None Include="Resources\column-chart.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\books1.png" />
+    <None Include="Resources\cubes1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

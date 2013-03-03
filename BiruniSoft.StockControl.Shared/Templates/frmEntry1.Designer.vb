@@ -29,10 +29,8 @@ Partial Class frmEntry1
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.DsStock1 = New BiruniSoft.StockControl.[Shared].dsStock()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DsStock1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -107,11 +105,6 @@ Partial Class frmEntry1
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'DsStock1
-        '
-        Me.DsStock1.DataSetName = "dsStock"
-        Me.DsStock1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'frmEntry1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -130,7 +123,6 @@ Partial Class frmEntry1
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DsStock1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -140,5 +132,4 @@ Partial Class frmEntry1
     Public WithEvents btnSave As System.Windows.Forms.Button
     Public WithEvents Label1 As System.Windows.Forms.Label
     Public WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Protected WithEvents DsStock1 As BiruniSoft.StockControl.Shared.dsStock
 End Class

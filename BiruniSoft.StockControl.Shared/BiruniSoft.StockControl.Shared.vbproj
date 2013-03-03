@@ -119,12 +119,6 @@
     <Compile Include="Templates\frmEntry1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Templates\InheritedDataGridView.Designer.vb">
-      <DependentUpon>InheritedDataGridView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\InheritedDataGridView.vb">
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -79,10 +79,10 @@
     <Compile Include="frmKategoriEntry.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKategoriLust.Designer.vb">
-      <DependentUpon>frmKategoriLust.vb</DependentUpon>
+    <Compile Include="frmKategoriList.Designer.vb">
+      <DependentUpon>frmKategoriList.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmKategoriLust.vb">
+    <Compile Include="frmKategoriList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSatuanEntry.Designer.vb">
@@ -126,14 +126,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmBarangEntry.resx">
+      <DependentUpon>frmBarangEntry.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBarangList.resx">
       <DependentUpon>frmBarangList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGudangEntry.resx">
+      <DependentUpon>frmGudangEntry.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGudangList.resx">
       <DependentUpon>frmGudangList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKategoriLust.resx">
-      <DependentUpon>frmKategoriLust.vb</DependentUpon>
+    <EmbeddedResource Include="frmKategoriEntry.resx">
+      <DependentUpon>frmKategoriEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKategoriList.resx">
+      <DependentUpon>frmKategoriList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatuanEntry.resx">
+      <DependentUpon>frmSatuanEntry.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSatuanList.resx">
       <DependentUpon>frmSatuanList.vb</DependentUpon>
